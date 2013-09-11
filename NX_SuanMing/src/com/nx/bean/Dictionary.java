@@ -6,4 +6,5 @@ package com.nx.bean;
  */
 public class Dictionary {
 
+	// For test
 }
