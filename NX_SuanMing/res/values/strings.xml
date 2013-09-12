@@ -4,5 +4,6 @@
     <string name="app_name">NX_SuanMing</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="search_button">查询</string>
 
 </resources>

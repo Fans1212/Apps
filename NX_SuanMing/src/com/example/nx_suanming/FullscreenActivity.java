@@ -1,6 +1,10 @@
 package com.example.nx_suanming;
 
+import java.io.InputStream;
+
+import com.example.nx_suanming.service.SrService;
 import com.example.nx_suanming.util.SystemUiHider;
+import com.nx.bean.SrBean;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -9,6 +13,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -116,6 +121,22 @@ public class FullscreenActivity extends Activity {
 		// while interacting with the UI.
 		findViewById(R.id.dummy_button).setOnTouchListener(
 				mDelayHideTouchListener);
+		findViewById(R.id.search_button).setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				//查询
+				SrService srService = new SrService();
+				String sr = "19800101";
+			
+				/////以下是测试代码//////
+				InputStream in = getResources().openRawResource(R.raw.nxsm);
+				String dbfile = "/data/data/" + FullscreenActivity.this.getPackageName() + "/nxsm.sqlite";
+				
+				SrBean srBean =  srService.find(FullscreenActivity.this,sr,in,dbfile);
+				System.out.println(srBean);
+			}
+		});
 	}
 
 	@Override
@@ -159,4 +180,5 @@ public class FullscreenActivity extends Activity {
 		mHideHandler.removeCallbacks(mHideRunnable);
 		mHideHandler.postDelayed(mHideRunnable, delayMillis);
 	}
+	
 }
