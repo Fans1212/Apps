@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -135,6 +136,8 @@ public class FullscreenActivity extends Activity {
 				
 				SrBean srBean =  srService.find(FullscreenActivity.this,sr,in,dbfile);
 				System.out.println(srBean);
+				
+				Log.d("", "");
 			}
 		});
 	}
