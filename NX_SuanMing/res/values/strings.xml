@@ -4,6 +4,9 @@
     <string name="app_name">NX_SuanMing</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="search_button">查询</string>
+    <string name="search_button"> 测  试 </string>
+    <string name="lbl_year">年</string>
+    <string name="lbl_month">月</string>
+    <string name="lbl_day">日</string>
 
 </resources>
