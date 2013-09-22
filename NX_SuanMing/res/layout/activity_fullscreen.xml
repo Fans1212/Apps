@@ -11,17 +11,6 @@
          TextureView, etc.
     -->
 
-    <TextView
-        android:id="@+id/fullscreen_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-
     <!--
          This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows.
@@ -41,105 +30,81 @@
             android:background="@color/black_overlay"
             android:orientation="horizontal"
             tools:ignore="UselessParent" >
-
-            <Button
-                android:id="@+id/dummy_button"
-                style="?buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
         </LinearLayout>
-
-
-            
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_gravity=""
-             >
+            android:layout_height="match_parent"
+            android:layout_gravity="" >
 
        <LinearLayout
-           android:layout_width="292dp"
-           android:layout_height="382dp"
-           android:layout_gravity="center_horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="right"
            android:orientation="vertical" >
 
-            <RelativeLayout 
-    android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-       
-    >
+           <RelativeLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="50dp" >
 
-    <EditText
-        android:id="@+id/edityear"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-         />
+               <EditText
+                   android:id="@+id/edityear"
+                   android:layout_width="80dp"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true" >
 
-    <TextView
-        android:id="@+id/textyear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lbl_year" 
-        android:layout_toRightOf="@id/edityear"
-         android:layout_alignBottom="@id/edityear"
-        />
-     <EditText 
-        android:id="@+id/editmonth"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-         android:layout_toRightOf="@id/textyear"
-         android:layout_alignBottom="@id/textyear"
-         />
-    <TextView
-        android:id="@+id/textmonth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lbl_month" 
-        android:layout_toRightOf="@id/editmonth"
-         android:layout_alignBottom="@id/editmonth"
-        />
-     <EditText 
-        android:id="@+id/editday"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/textmonth"
-         android:layout_alignBottom="@id/textmonth"
-         />
-    <TextView
-        android:id="@+id/textday"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:text="@string/lbl_day" 
-        android:layout_toRightOf="@id/editday"
-         android:layout_alignBottom="@id/editday"
-        />
-    </RelativeLayout>
+                   <requestFocus />
+               </EditText>
 
-            <Button
-                android:id="@+id/search_button"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:text="@string/search_button" />
+               <TextView
+                   android:id="@+id/textyear"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignBottom="@id/edityear"
+                   android:layout_toRightOf="@id/edityear"
+                   android:text="@string/lbl_year" />
 
-            <EditText
-                android:id="@+id/editText1"
-                android:layout_width="match_parent"
-                android:layout_height="196dp"
-                android:layout_marginTop="20dp"
-                android:minLines="5"
-                android:inputType="textMultiLine" >
+               <EditText
+                   android:id="@+id/editmonth"
+                   android:layout_width="80dp"
+                   android:layout_height="wrap_content"
+                   android:layout_alignBottom="@id/textyear"
+                   android:layout_toRightOf="@id/textyear" />
 
-                <requestFocus />
-            </EditText>
-        
-        </LinearLayout>
+               <TextView
+                   android:id="@+id/textmonth"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignBottom="@id/editmonth"
+                   android:layout_toRightOf="@id/editmonth"
+                   android:text="@string/lbl_month" />
+
+               <EditText
+                   android:id="@+id/editday"
+                   android:layout_width="80dp"
+                   android:layout_height="wrap_content"
+                   android:layout_alignBottom="@id/textmonth"
+                   android:layout_toRightOf="@+id/textmonth" />
+
+               <TextView
+                   android:id="@+id/textday"
+                   android:layout_width="80dp"
+                   android:layout_height="wrap_content"
+                   android:layout_alignBottom="@id/editday"
+                   android:layout_toRightOf="@id/editday"
+                   android:text="@string/lbl_day" />
+           </RelativeLayout>
+
+           <Button
+               android:id="@+id/search_button"
+               android:layout_width="86dp"
+               android:layout_height="match_parent"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:text="@string/search_button" />
+       </LinearLayout>
+
         </FrameLayout>
       
 
